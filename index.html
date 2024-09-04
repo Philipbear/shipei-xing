@@ -16,15 +16,25 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    section {
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
   </style>
 </head>
 <body>
   <header class="bg-white text-gray-800 py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-xl font-bold">Shipei Xing</h1>
       <nav>
         <ul class="flex space-x-4">
           <li><a href="#about" class="hover:text-gray-600">About</a></li>
+          <li><a href="#education" class="hover:text-gray-600">Education</a></li>
+          <li><a href="#employment" class="hover:text-gray-600">Employment</a></li>
           <li><a href="#publications" class="hover:text-gray-600">Publications</a></li>
           <li><a href="#contact" class="hover:text-gray-600">Contact</a></li>
         </ul>
@@ -35,6 +45,7 @@
   <main class="container mx-auto mt-8 px-4 flex">
     <div class="w-1/3 pr-8 flex flex-col items-center">
       <img src="asset/image/Shipei_photo.jpg" alt="Shipei Xing" class="profile-image mb-4">
+      <h1 class="text-xl font-bold mb-4">Shipei Xing</h1>
       <div class="flex space-x-4">
         <a href="https://github.com/philipbear" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800">
           <i class="fab fa-github fa-2x"></i>
@@ -45,32 +56,82 @@
         <a href="asset/image/wechat_qr_code.jpg" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800">
           <i class="fab fa-weixin fa-2x"></i>
         </a>
+        <a href="mailto:s1xing@health.ucsd.edu" class="text-gray-600 hover:text-gray-800">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
       </div>
       <div class="mt-4">
         <a href="asset/cv/cv_shipei_20240904.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Download CV</a>
       </div>
     </div>
     <div class="w-2/3">
-      <section id="about" class="mb-8">
-        <p class="text-lg">Hi, I'm Shipei Xing, a postdoctoral researcher working in <a href="https://dorresteinlab.ucsd.edu/home" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Pieter Dorrestein</a>'s lab in UC San Diego. I'm passionate about metabolomics and mass spectrometry informatics.
-          <br><br>My <a href="https://scholar.google.com/citations?user=en0zumcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Google Scholar</a></p>
+      <section id="about">
+        <p class="text-lg">Hi, I'm Shipei Xing, a postdoctoral researcher in <a href="https://dorresteinlab.ucsd.edu/home" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Pieter Dorrestein</a>'s lab in UC San Diego.
+          <br><br>I'm passionate about metabolomics and mass spectrometry informatics.
+          <br><br>See my <a href="https://scholar.google.com/citations?user=en0zumcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Google Scholar</a> for the full publication list.</p>
       </section>
 
-      <section id="publications" class="mb-8">
-        <h2 class="text-xl font-bold mb-4">Selected publications</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <li class="bg-white shadow p-4">
-            <h3 class="text-l mb-2">BUDDY</h3>
-            <p> Molecular formula discovery via bottom-up MS/MS interrogation [<a href="https://www.nature.com/articles/s41592-023-01850-x" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Paper link</a>].</p>
+      <section id="education">
+        <h2 class="text-xl font-bold mb-4">Education</h2>
+        <ul class="bullet-list">
+          <li class="mb-4">
+            <h3 class="text-lg">University of British Columbia</h3>
+            <p>Ph.D. in Chemistry, 2019.1-2023.4 <br>Supervisor: Tao Huan</p>
           </li>
-          <li class="bg-white shadow p-4">
-            <h3 class="text-l mb-2">Core Structure Search</h3>
-            <p> Hypothetical neutral losses for MS/MS spectral similarity analysis [<a href="https://pubs.acs.org/doi/10.1021/acs.analchem.0c02521" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Paper link</a>].</p>
+          <li class="mb-4">
+            <h3 class="text-lg">Zhejiang University</h3>
+            <p>B.S. in Chemistry, 2014.9-2018.6 <br>Supervisor: Feihe Huang, Zhan Lu</p>
+          </li>
+          <li>
+            <h3 class="text-lg">University of Utah</h3>
+            <p>Visiting scholar, 2017.3-2017.9 <br>Supervisor: Peter Stang</p>
           </li>
         </ul>
       </section>
 
-      <section id="contact" class="mb-8">
+      <section id="employment">
+        <h2 class="text-xl font-bold mb-4">Employment</h2>
+        <ul class="bullet-list">
+          <li class="mb-4">
+            <h3 class="text-lg">University of California, San Diego</h3>
+            <p>Postdoctoral researcher, 2023.8-Present <br>Supervisor: Pieter C Dorrestein</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2 class="text-xl font-bold mb-4">Selected publications</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <li class="bg-white shadow p-4">
+            <h3 class="text-l mb-2">BUDDY</h3>
+            <p> Molecular formula discovery via bottom-up MS/MS interrogation. [<a href="https://www.nature.com/articles/s41592-023-01850-x" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Nature Methods 2023</a>]</p>
+          </li>
+
+          <li class="bg-white shadow p-4">
+            <h3 class="text-l mb-2">SteroidXtract</h3>
+            <p> Deep learning-based steroid-like MS/MS spectra retrieval [<a href="https://pubs.acs.org/doi/10.1021/acs.analchem.0c04834" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Analytical Chemistry 2021</a>]</p>
+          </li>
+
+          <li class="bg-white shadow p-4">
+            <h3 class="text-l mb-2">Core Structure-based Search</h3>
+            <p> Hypothetical neutral losses for MS/MS spectral similarity analysis. [<a href="https://pubs.acs.org/doi/10.1021/acs.analchem.0c02521" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Analytical Chemistry 2020</a>]</p>
+          </li>
+
+          <li class="bg-white shadow p-4">
+            <h3 class="text-l mb-2">Radical ions in MS/MS</h3>
+            <p> Systematic investigation of radical fragment ions in CID-based MS/MS [<a href="https://www.sciencedirect.com/science/article/pii/S0003267022001842" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Analytica Chimica Acta 2022</a>]</p>
+          </li>
+
+          <li class="bg-white shadow p-4">
+            <h3 class="text-l mb-2">Cleaning of Chimeric MS/MS</h3>
+            <p> Recognizing and cleaning chimeric MS/MS through machine learning [<a href="https://pubs.acs.org/doi/full/10.1021/jasms.0c00478" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">JASMS 2021</a>]</p>
+          </li>
+
+
+        </ul>
+      </section>
+
+      <section id="contact">
         <h2 class="text-xl font-bold mb-4">Contact Me</h2>
         <p class="text-lg">You can reach me at <a href="mailto:s1xing@health.ucsd.edu" class="text-blue-500 hover:text-blue-700">s1xing@health.ucsd.edu</a> or <a href="mailto:philipxsp@hotmail.com" class="text-blue-500 hover:text-blue-700">philipxsp@hotmail.com</a>.</p>
       </section>
