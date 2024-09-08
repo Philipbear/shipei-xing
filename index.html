@@ -35,7 +35,7 @@
           <li><a href="#about" class="hover:text-gray-600">About me</a></li>
           <li><a href="#education_employment" class="hover:text-gray-600">Education & Employment</a></li>
           <li><a href="#publications" class="hover:text-gray-600">Publications</a></li>
-          <li><a href="#projects" class="hover:text-gray-600">Highlighted Projects</a></li>
+          <li><a href="#projects" class="hover:text-gray-600">Highlighted projects</a></li>
         </ul>
       </nav>
     </div>
@@ -198,7 +198,7 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
       const query = `
         query {
           user(login: "${username}") {
-            pinnedItems(first: 6, types: REPOSITORY) {
+            pinnedItems(first: 10, types: REPOSITORY) {
               nodes {
                 ... on Repository {
                   name
