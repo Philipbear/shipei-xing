@@ -7,15 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL9GPVKQK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YL9GPVKQK1');
-  </script>
-
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -88,38 +79,18 @@
           <!-- Divider -->
           <div class="divider"></div>
 
-          <!-- Analytics Stats -->
-          <div class="w-full px-4">
-            <h3 class="text-lg font-medium text-center mb-4">Website Stats</h3>
-            <div class="space-y-4">
-              <!-- Views -->
-              <div class="bg-blue-50 rounded-lg p-3 text-center">
-                <i class="fas fa-eye text-blue-600 mb-2"></i>
-                <div class="text-xl font-bold text-blue-600">
-                  <span id="pageViews">...</span>
-                </div>
-                <div class="text-sm text-gray-600">Page Views</div>
-              </div>
-
-              <!-- Visitors -->
-              <div class="bg-green-50 rounded-lg p-3 text-center">
-                <i class="fas fa-users text-green-600 mb-2"></i>
-                <div class="text-xl font-bold text-green-600">
-                  <span id="visitors">...</span>
-                </div>
-                <div class="text-sm text-gray-600">Unique Visitors</div>
-              </div>
-
-              <!-- Countries -->
-              <div class="bg-purple-50 rounded-lg p-3 text-center">
-                <i class="fas fa-globe text-purple-600 mb-2"></i>
-                <div class="text-xl font-bold text-purple-600">
-                  <span id="countries">...</span>
-                </div>
-                <div class="text-sm text-gray-600">Countries</div>
-              </div>
+          <!-- Simple Stats Section -->
+          <div class="w-full px-4 mb-8">
+            <div class="flex justify-center mb-4">
+              <!-- Simple hit counter -->
+              <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fphilipbear.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false" alt="Visitor Count" />
+            </div>
+            <!-- GitHub Stats -->
+            <div class="flex justify-center">
+              <img src="https://github-readme-stats.vercel.app/api?username=philipbear&show_icons=true&hide_title=true&hide_border=true&bg_color=ffffff&text_color=718096&icon_color=4F46E5&hide_rank=true&include_all_commits=true&count_private=true&hide=contribs,issues,prs" alt="GitHub Stats" class="max-w-full" />
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -416,37 +387,9 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
       });
     }
 
-    // // Function to fetch website analytics data
-    // async function fetchAnalyticsData() {
-    //   const response = await fetch('https://api.countapi.xyz/hit/philipbear.github.io/visits');
-    //   const data = await response.json();
-    //   document.getElementById('pageViews').textContent = data.value.toLocaleString();
-    //
-    //   const visitors = await fetch('https://api.countapi.xyz/get/philipbear.github.io/visitors');
-    //   const visitorsData = await visitors.json();
-    //   document.getElementById('visitors').textContent = visitorsData.value.toLocaleString();
-    //
-    //   const countries = await fetch('https://api.countapi.xyz/get/philipbear.github.io/countries');
-    //   const countriesData = await countries.json();
-    //   document.getElementById('countries').textContent = countriesData.value.toLocaleString();
-    // }
-
-    // Function to fetch analytics data
-    function fetchAnalyticsData() {
-      // Since we can't directly access GA4 data from client-side
-      // This is a placeholder that would normally be replaced with real API calls
-      // You would typically implement this through a backend service
-
-      // For now, we'll use the GA4 client to get some basic data
-      gtag('get', 'G-YL9GPVKQK1', 'page_view', (value) => {
-        document.getElementById('pageViews').textContent = value || '0';
-      });
-    }
-
     // Call the function when the page loads
     window.onload = function() {
       fetchPinnedRepos();
-      fetchAnalyticsData();
     };
   </script>
 </body>
