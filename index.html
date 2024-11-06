@@ -94,17 +94,6 @@
           <!-- Divider -->
           <div class="divider"></div>
 
-            <!-- Google Scholar Stats -->
-            <div id="scholar-stats-root"></div>
-
-            <!-- GitHub Stats -->
-            <div class="flex justify-center mb-4">
-              <img src="https://github-readme-stats.vercel.app/api?username=philipbear&show_icons=true&hide_title=true&hide_border=true&bg_color=ffffff&text_color=718096&icon_color=4F46E5&hide_rank=true&include_all_commits=true&count_private=true&hide=contribs,issues,prs"
-                   alt="GitHub Stats"
-                   class="max-w-full" />
-            </div>
-
-
             <!-- Simple hit counter -->
             <div class="flex justify-center mb-4">
               <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fphilipbear.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false" alt="Visitor Count" />
@@ -185,6 +174,9 @@
 
       <section id="publications">
         <h2 class="text-lg font-bold mb-4">Publications</h2>
+
+        <!-- Google Scholar Stats -->
+        <div id="scholar-stats-root"></div>
         <p class="text-l">See my <a href="https://scholar.google.com/citations?user=en0zumcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Google Scholar</a> for the full publication list.</p>
 
         <br>
@@ -279,6 +271,13 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
         <h2 class="text-lg font-bold mb-4">Highlighted Projects</h2>
         <div id="github-repos" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- GitHub repositories will be loaded here -->
+        </div>
+
+        <!-- GitHub Stats -->
+        <div class="flex justify-center mb-4">
+          <img src="https://github-readme-stats.vercel.app/api?username=philipbear&show_icons=true&hide_title=true&hide_border=true&bg_color=ffffff&text_color=718096&icon_color=4F46E5&hide_rank=true&include_all_commits=true&count_private=true&hide=contribs,issues,prs"
+               alt="GitHub Stats"
+               class="max-w-full" />
         </div>
       </section>
 
@@ -440,47 +439,47 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
       }, []);
 
       return (
-          <div className="w-full mb-6">
-              <div className="grid grid-cols-2 gap-2">
+          <div className="w-full mb-4">
+              <div className="grid grid-cols-4 gap-4">
                   {/* Publications Card */}
-                  <div className="bg-white shadow rounded-lg p-4 text-center hover:shadow-lg transition-shadow duration-200">
-                      <div className="text-2xl font-bold text-gray-900">
+                  <div className="bg-white shadow rounded-lg p-3 text-center hover:shadow-lg transition-shadow duration-200">
+                      <div className="text-lg font-bold text-gray-800">
                           {stats.total_publications}
                       </div>
-                      <div className="text-sm text-gray-600 flex items-center justify-center gap-1">
+                      <div className="text-xs text-gray-600 flex items-center justify-center gap-1">
                           <i className="fas fa-book text-xs"></i>
                           Publications
                       </div>
                   </div>
 
-                  {/* h-index Card */}
-                  <div className="bg-white shadow rounded-lg p-4 text-center hover:shadow-lg transition-shadow duration-200">
-                      <div className="text-2xl font-bold text-gray-900">
-                          {stats.h_index}
-                      </div>
-                      <div className="text-sm text-gray-600 flex items-center justify-center gap-1">
-                          <i className="fas fa-chart-line text-xs"></i>
-                          h-index
-                      </div>
-                  </div>
-
                   {/* Total Citations Card */}
-                  <div className="bg-white shadow rounded-lg p-4 text-center hover:shadow-lg transition-shadow duration-200">
-                      <div className="text-2xl font-bold text-gray-900">
+                  <div className="bg-white shadow rounded-lg p-3 text-center hover:shadow-lg transition-shadow duration-200">
+                      <div className="text-lg font-bold text-gray-800">
                           {stats.total_citations}
                       </div>
-                      <div className="text-sm text-gray-600 flex items-center justify-center gap-1">
+                      <div className="text-xs text-gray-600 flex items-center justify-center gap-1">
                           <i className="fas fa-quote-right text-xs"></i>
                           Citations
                       </div>
                   </div>
 
+                  {/* h-index Card */}
+                  <div className="bg-white shadow rounded-lg p-3 text-center hover:shadow-lg transition-shadow duration-200">
+                      <div className="text-lg font-bold text-gray-800">
+                          {stats.h_index}
+                      </div>
+                      <div className="text-xs text-gray-600 flex items-center justify-center gap-1">
+                          <i className="fas fa-chart-line text-xs"></i>
+                          h-index
+                      </div>
+                  </div>
+
                   {/* i10-index Card */}
-                  <div className="bg-white shadow rounded-lg p-4 text-center hover:shadow-lg transition-shadow duration-200">
-                      <div className="text-2xl font-bold text-gray-900">
+                  <div className="bg-white shadow rounded-lg p-3 text-center hover:shadow-lg transition-shadow duration-200">
+                      <div className="text-lg font-bold text-gray-800">
                           {stats.i10_index}
                       </div>
-                      <div className="text-sm text-gray-600 flex items-center justify-center gap-1">
+                      <div className="text-xs text-gray-600 flex items-center justify-center gap-1">
                           <i className="fas fa-chart-bar text-xs"></i>
                           i10-index
                       </div>
@@ -488,7 +487,7 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
               </div>
               {/* Last Updated Timestamp */}
               {stats.updated_at && (
-                  <div className="text-xs text-gray-500 text-center mt-2 border-t pt-2">
+                  <div className="text-xs text-gray-500 text-center mt-1 border-t pt-1">
                       <i className="fas fa-sync-alt mr-1"></i>
                       Last updated: {stats.updated_at}
                   </div>
@@ -496,6 +495,7 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
           </div>
       );
   };
+
 
   // Render the component
   ReactDOM.render(
