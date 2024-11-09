@@ -432,7 +432,9 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
       });
 
       useEffect(() => {
-          fetch('./asset/data/scholar_stats.json')
+          // Add timestamp as cache-busting parameter
+          const timestamp = new Date().getTime();
+          fetch(`./asset/data/scholar_stats.json?t=${timestamp}`)
               .then(response => response.json())
               .then(data => setStats(data))
               .catch(error => console.error('Error loading stats:', error));
@@ -495,7 +497,6 @@ in untargeted metabolomics. [<a href="https://pubs.acs.org/doi/10.1021/acs.analc
           </div>
       );
   };
-
 
   // Render the component
   ReactDOM.render(
