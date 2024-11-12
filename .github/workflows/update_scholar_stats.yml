@@ -1,5 +1,4 @@
 name: Update Scholar Stats
-
 on:
   schedule:
     - cron: '0 */12 * * *'  # Runs every 12 hours
@@ -10,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write      # Add this permission
+      id-token: write   # Add this permission
 
     steps:
     - uses: actions/checkout@v2
@@ -33,3 +34,12 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add asset/data/scholar_stats.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update scholar stats" && git push)
+
+    # Add these steps to trigger GitHub Pages rebuild
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
