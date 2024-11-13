@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write      # Add this permission
-      id-token: write   # Add this permission
+      pages: write
+      id-token: write
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4  # Updated from v2
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5  # Updated from v2
       with:
         python-version: '3.x'
 
@@ -35,7 +35,12 @@ jobs:
         git add asset/data/scholar_stats.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update scholar stats" && git push)
 
-    # Add these steps to trigger GitHub Pages rebuild
+    # Build artifact that will be used for deployment
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'  # Upload the entire repository
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
